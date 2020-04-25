@@ -8,12 +8,15 @@ using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using System.Web.Http.Description;
+using T1809E.SEM3.P102_Team05.Commons;
 using T1809E.SEM3.P102_Team05.Data;
 using T1809E.SEM3.P102_Team05.Models;
 
 namespace T1809E.SEM3.P102_Team05.Controllers
 {
+    [EnableCors(origins: Constant.ClientLocal, headers: "*", methods: "*")]
     public class ProductsController : ApiController
     {
         private AppDatabaseContext db = new AppDatabaseContext();

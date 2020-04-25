@@ -11,6 +11,7 @@ namespace T1809E.SEM3.P102_Team05
         {
             // Web API configuration and services
 
+            config.EnableCors();
             // Web API routes
             config.MapHttpAttributeRoutes();
 
