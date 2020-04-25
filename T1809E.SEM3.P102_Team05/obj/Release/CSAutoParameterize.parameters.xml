@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="AppDatabaseContext-Web.config Connection String" description="AppDatabaseContext Connection String used in web.config by the application to access the database." defaultValue="Data Source=(localdb)\MSSQLLocalDB; Initial Catalog=AppDatabaseContext-20200425170047; Integrated Security=True; MultipleActiveResultSets=True; AttachDbFilename=|DataDirectory|AppDatabaseContext-20200425170047.mdf" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\TrangDM2\\Documents\\Visual\ Studio\ Projects\\Project\ Sem\ 3\\T1809E\.SEM3\.P102_Team05\\T1809E\.SEM3\.P102_Team05\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='AppDatabaseContext']/@connectionString" />
+  </parameter>
+</parameters>
