@@ -143,6 +143,7 @@
     <Compile Include="Repositories\ProductRepository.cs" />
     <Compile Include="Services\IAccountService.cs" />
     <Compile Include="Services\Implements\AccountService.cs" />
+    <Compile Include="Services\Implements\FileUploadService.cs" />
     <Compile Include="Services\Implements\RoleService.cs" />
     <Compile Include="Services\IRoleService.cs" />
   </ItemGroup>
