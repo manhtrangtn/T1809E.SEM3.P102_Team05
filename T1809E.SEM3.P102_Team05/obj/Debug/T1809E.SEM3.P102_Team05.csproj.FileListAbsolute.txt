@@ -90,3 +90,9 @@ C:\Users\TrangDM2\Documents\Visual Studio Projects\Project Sem 3\T1809E.SEM3.P10
 C:\Users\TrangDM2\Documents\Visual Studio Projects\Project Sem 3\T1809E.SEM3.P102_Team05\T1809E.SEM3.P102_Team05\bin\System.Web.Cors.dll
 C:\Users\TrangDM2\Documents\Visual Studio Projects\Project Sem 3\T1809E.SEM3.P102_Team05\T1809E.SEM3.P102_Team05\bin\System.Web.Http.Cors.dll
 C:\Users\TrangDM2\Documents\Visual Studio Projects\Project Sem 3\T1809E.SEM3.P102_Team05\T1809E.SEM3.P102_Team05\bin\System.Web.Http.Cors.xml
+C:\Users\TrangDM2\Documents\Visual Studio Projects\Project Sem 3\T1809E.SEM3.P102_Team05\T1809E.SEM3.P102_Team05\bin\Microsoft.Azure.KeyVault.Core.dll
+C:\Users\TrangDM2\Documents\Visual Studio Projects\Project Sem 3\T1809E.SEM3.P102_Team05\T1809E.SEM3.P102_Team05\bin\Microsoft.WindowsAzure.Storage.dll
+C:\Users\TrangDM2\Documents\Visual Studio Projects\Project Sem 3\T1809E.SEM3.P102_Team05\T1809E.SEM3.P102_Team05\bin\Microsoft.WindowsAzure.StorageClient.dll
+C:\Users\TrangDM2\Documents\Visual Studio Projects\Project Sem 3\T1809E.SEM3.P102_Team05\T1809E.SEM3.P102_Team05\bin\Microsoft.Azure.KeyVault.Core.xml
+C:\Users\TrangDM2\Documents\Visual Studio Projects\Project Sem 3\T1809E.SEM3.P102_Team05\T1809E.SEM3.P102_Team05\bin\Microsoft.WindowsAzure.Storage.pdb
+C:\Users\TrangDM2\Documents\Visual Studio Projects\Project Sem 3\T1809E.SEM3.P102_Team05\T1809E.SEM3.P102_Team05\bin\Microsoft.WindowsAzure.Storage.xml
