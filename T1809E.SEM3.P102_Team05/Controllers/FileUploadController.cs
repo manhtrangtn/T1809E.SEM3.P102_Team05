@@ -20,7 +20,7 @@ namespace T1809E.SEM3.P102_Team05.Controllers
       {
         string fileUrls = "";
         var context = HttpContext.Current;
-        var root = context.Server.MapPath("~/App_Data");
+        var root = context.Server.MapPath("~/bin");
         var provider = new MultipartFormDataStreamProvider(root);
         try
         {

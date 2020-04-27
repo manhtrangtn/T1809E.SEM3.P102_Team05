@@ -6,10 +6,13 @@ using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 using System.Web.Http;
 using System.Web.Http.Cors;
 using System.Web.Http.Description;
+using System.Web.ModelBinding;
 using T1809E.SEM3.P102_Team05.Commons;
 using T1809E.SEM3.P102_Team05.Data;
 using T1809E.SEM3.P102_Team05.Models;
@@ -25,11 +28,13 @@ namespace T1809E.SEM3.P102_Team05.Controllers
     {
         private AppDatabaseContext db;
         private IProductService productService;
+        private readonly FileUploadService _fileUploadService;
         public ProductsController()
         {
             this.db = new AppDatabaseContext();
             var productRepo = new ProductRepository(db);
             this.productService = new ProductService(productRepo);
+            this._fileUploadService = new FileUploadService();
         }
 
         // GET: api/Products
@@ -95,13 +100,13 @@ namespace T1809E.SEM3.P102_Team05.Controllers
 
         // POST: api/Products
         [ResponseType(typeof(Product))]
+        [HttpPost]
         public async Task<IHttpActionResult> PostProduct(Product product)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
-
             productService.Add(product);
             await db.SaveChangesAsync();
 

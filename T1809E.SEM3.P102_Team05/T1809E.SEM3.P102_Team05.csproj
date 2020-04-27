@@ -145,9 +145,9 @@
     <Compile Include="Migrations\202004251001318_InitiationDb.Designer.cs">
       <DependentUpon>202004251001318_InitiationDb.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202004270152471_addAttrProducts.cs" />
-    <Compile Include="Migrations\202004270152471_addAttrProducts.Designer.cs">
-      <DependentUpon>202004270152471_addAttrProducts.cs</DependentUpon>
+    <Compile Include="Migrations\202004271524463_newMigration.cs" />
+    <Compile Include="Migrations\202004271524463_newMigration.Designer.cs">
+      <DependentUpon>202004271524463_newMigration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Account.cs" />
@@ -184,8 +184,8 @@
     <EmbeddedResource Include="Migrations\202004251001318_InitiationDb.resx">
       <DependentUpon>202004251001318_InitiationDb.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202004270152471_addAttrProducts.resx">
-      <DependentUpon>202004270152471_addAttrProducts.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202004271524463_newMigration.resx">
+      <DependentUpon>202004271524463_newMigration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
