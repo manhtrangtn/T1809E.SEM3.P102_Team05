@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
@@ -18,9 +19,9 @@ namespace T1809E.SEM3.P102_Team05.Models
         public int InStock { get; set; }
         public OrderStatus Status { get; set; }
 
-
     }
-    enum OrderStatus
+
+    public enum OrderStatus
     {
         ACTIVE,
         DISABLE,
