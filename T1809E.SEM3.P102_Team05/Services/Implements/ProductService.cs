@@ -9,49 +9,49 @@ namespace T1809E.SEM3.P102_Team05.Services.Implements
 {
     public class ProductService : IProductService
     {
-        private ProductRepository productRepo;
+        private ProductRepository ProductRepo;
 
         public ProductService(ProductRepository repo)
         {
-            this.productRepo = repo;
+            this.ProductRepo = repo;
         }
 
         public Product Add(Product entity)
         {
-            return productRepo.Add(entity);
+            return ProductRepo.Add(entity);
         }
 
         public Product Delete(Product entity)
         {
-            return productRepo.Delete(entity);
+            return ProductRepo.Delete(entity);
         }
 
         public Product Delete(int id)
         {
-            return productRepo.Delete(id);
+            return ProductRepo.Delete(id);
         }
 
         public void Update(Product entity)
         {
-            productRepo.Update(entity);
+            ProductRepo.Update(entity);
         }
 
         public IEnumerable<Product> GetAll()
         {
-            return productRepo.GetAll();
+            return ProductRepo.GetAll();
         }
 
         public async Task<Product> FindById(int id)
         {
-            return await productRepo.FindById(id);
+            return await ProductRepo.FindById(id);
         }
 
-        public IEnumerable<Product> getListWithSearchAndPaging(string keyword, string sortType, string sortBy, int pageNumber, int pageSize)
+        public IEnumerable<Product> GetListWithSearchAndPaging(string keyword, string sortType, string sortBy, int pageNumber, int pageSize)
         {
             bool isAscending;
             string columnName;
             IEnumerable<Product> products;
-            validatePageArgs(keyword, sortType, sortBy, pageNumber, pageSize);
+            ValidatePageArgs(keyword, sortType, sortBy, pageNumber, pageSize);
 
             isAscending = sortType.Equals("asc") ? true : false;
 
@@ -59,11 +59,11 @@ namespace T1809E.SEM3.P102_Team05.Services.Implements
 
             if (string.IsNullOrEmpty(keyword))
             {
-                products = productRepo.GetMultiPaging(productRepo
+                products = ProductRepo.GetMultiPaging(ProductRepo
                     .QueryOrder(null, columnName), sortBy, isAscending, pageNumber, pageSize);
             }else
             {
-                products = productRepo.GetMultiPaging(productRepo
+                products = ProductRepo.GetMultiPaging(ProductRepo
                     .QueryOrder(x => x.Name.Contains(keyword), columnName), sortBy, isAscending, pageNumber, pageSize);
             }
 
@@ -71,7 +71,7 @@ namespace T1809E.SEM3.P102_Team05.Services.Implements
         }
 
 
-        private void validatePageArgs(string keyword, string sortType, string sortBy, int pageNumber, int pageSize)
+        private void ValidatePageArgs(string keyword, string sortType, string sortBy, int pageNumber, int pageSize)
         {
             if (!string.IsNullOrEmpty(sortType))
             {

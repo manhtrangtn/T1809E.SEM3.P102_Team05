@@ -34,11 +34,5 @@ namespace T1809E.SEM3.P102_Team05.Repositories
             return _resetSet;
         }
 
-        public IEnumerable<Product> GetPaging(IQueryable<Product> query)
-        {
-            
-            return query.Skip(2).Take(4).AsQueryable();
-        }
-
     }
 }

@@ -33,14 +33,14 @@ namespace T1809E.SEM3.P102_Team05.Controllers
         }
 
         // GET: api/Products
-        public IQueryable<Product> GetProducts(requireModelGetAll requireModel)
+        public IQueryable<Product> GetProducts(RequireModelGetAll requireModel)
         {
             if(requireModel == null)
             {
                 return productService.GetAll() as IQueryable<Product>;
             }
 
-            return productService.getListWithSearchAndPaging(requireModel.keyword,
+            return productService.GetListWithSearchAndPaging(requireModel.keyword,
                 requireModel.sortType, requireModel.sortBy, requireModel.pageNumber, requireModel.pageSize) as IQueryable<Product>;
         }
 
