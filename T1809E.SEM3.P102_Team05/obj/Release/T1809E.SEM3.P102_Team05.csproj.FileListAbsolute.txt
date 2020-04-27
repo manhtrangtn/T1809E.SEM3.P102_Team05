@@ -87,3 +87,7 @@ C:\Users\TrangDM2\Documents\Visual Studio Projects\Project Sem 3\T1809E.SEM3.P10
 C:\Users\TrangDM2\Documents\Visual Studio Projects\Project Sem 3\T1809E.SEM3.P102_Team05\T1809E.SEM3.P102_Team05\obj\Release\T1809E.SEM3.P102_Team05.dll
 C:\Users\TrangDM2\Documents\Visual Studio Projects\Project Sem 3\T1809E.SEM3.P102_Team05\T1809E.SEM3.P102_Team05\obj\Release\T1809E.SEM3.P102_Team05.pdb
 C:\Users\TrangDM2\Documents\Visual Studio Projects\Project Sem 3\T1809E.SEM3.P102_Team05\T1809E.SEM3.P102_Team05\obj\Release\T1809E.SEM3.P102_Team05.csprojAssemblyReference.cache
+C:\Users\TrangDM2\Documents\Visual Studio Projects\Project Sem 3\T1809E.SEM3.P102_Team05\T1809E.SEM3.P102_Team05\bin\System.Web.Cors.dll
+C:\Users\TrangDM2\Documents\Visual Studio Projects\Project Sem 3\T1809E.SEM3.P102_Team05\T1809E.SEM3.P102_Team05\bin\System.Web.Http.Cors.dll
+C:\Users\TrangDM2\Documents\Visual Studio Projects\Project Sem 3\T1809E.SEM3.P102_Team05\T1809E.SEM3.P102_Team05\bin\System.Web.Http.Cors.xml
+C:\Users\TrangDM2\Documents\Visual Studio Projects\Project Sem 3\T1809E.SEM3.P102_Team05\T1809E.SEM3.P102_Team05\obj\Release\T1809E.SEM3.P102_Team05.csproj.CoreCompileInputs.cache
