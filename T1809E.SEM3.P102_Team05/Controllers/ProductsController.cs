@@ -13,25 +13,42 @@ using System.Web.Http.Description;
 using T1809E.SEM3.P102_Team05.Commons;
 using T1809E.SEM3.P102_Team05.Data;
 using T1809E.SEM3.P102_Team05.Models;
+using T1809E.SEM3.P102_Team05.Models.ModelRequires;
+using T1809E.SEM3.P102_Team05.Repositories;
+using T1809E.SEM3.P102_Team05.Services;
+using T1809E.SEM3.P102_Team05.Services.Implements;
 
 namespace T1809E.SEM3.P102_Team05.Controllers
 {
     [EnableCors(origins: Constant.ClientLocal, headers: "*", methods: "*")]
     public class ProductsController : ApiController
     {
-        private AppDatabaseContext db = new AppDatabaseContext();
+        private AppDatabaseContext db;
+        private IProductService productService;
+        public ProductsController()
+        {
+            this.db = new AppDatabaseContext();
+            var productRepo = new ProductRepository(db);
+            this.productService = new ProductService(productRepo);
+        }
 
         // GET: api/Products
-        public IQueryable<Product> GetProducts()
+        public IQueryable<Product> GetProducts(RequireModelGetAll requireModel)
         {
-            return db.Products;
+            if(requireModel == null)
+            {
+                return productService.GetAll() as IQueryable<Product>;
+            }
+
+            return productService.GetListWithSearchAndPaging(requireModel.keyword,
+                requireModel.sortType, requireModel.sortBy, requireModel.pageNumber, requireModel.pageSize) as IQueryable<Product>;
         }
 
         // GET: api/Products/5
         [ResponseType(typeof(Product))]
         public async Task<IHttpActionResult> GetProduct(int id)
         {
-            Product product = await db.Products.FindAsync(id);
+            Product product = await productService.FindById(id);
             if (product == null)
             {
                 return NotFound();
@@ -42,6 +59,7 @@ namespace T1809E.SEM3.P102_Team05.Controllers
 
         // PUT: api/Products/5
         [ResponseType(typeof(void))]
+        [HttpPut]
         public async Task<IHttpActionResult> PutProduct(int id, Product product)
         {
             if (!ModelState.IsValid)
@@ -54,7 +72,7 @@ namespace T1809E.SEM3.P102_Team05.Controllers
                 return BadRequest();
             }
 
-            db.Entry(product).State = EntityState.Modified;
+            productService.Update(product);
 
             try
             {
@@ -84,7 +102,7 @@ namespace T1809E.SEM3.P102_Team05.Controllers
                 return BadRequest(ModelState);
             }
 
-            db.Products.Add(product);
+            productService.Add(product);
             await db.SaveChangesAsync();
 
             return CreatedAtRoute("DefaultApi", new { id = product.Id }, product);
@@ -100,7 +118,7 @@ namespace T1809E.SEM3.P102_Team05.Controllers
                 return NotFound();
             }
 
-            db.Products.Remove(product);
+            productService.Delete(id);
             await db.SaveChangesAsync();
 
             return Ok(product);
