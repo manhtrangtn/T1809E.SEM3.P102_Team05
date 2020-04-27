@@ -18,9 +18,7 @@ namespace T1809E.SEM3.P102_Team05.Services.Implements
       public async Task<string> FileUpload(MultipartFileData file)
       {
         try
-
         {
-
           var credentials = new StorageCredentials(Constant.AccountName, Constant.AccessKeyValue);
 
           var account = new CloudStorageAccount(credentials, useHttps: true);
@@ -37,13 +35,13 @@ namespace T1809E.SEM3.P102_Team05.Services.Implements
           
           await cloudBlockBlob.UploadFromStreamAsync(File.OpenRead(file.LocalFileName));
           var uri = cloudBlockBlob.Uri.AbsoluteUri;
+
           return uri.ToString();
         }
         catch (Exception e)
-
         {
           Debug.WriteLine(e);
-          return null;
+          return e.Message;
         }
       }
     }

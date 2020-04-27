@@ -15,16 +15,19 @@ namespace T1809E.SEM3.P102_Team05.Controllers
     public class FileUploadController : ApiController
     {
       private readonly FileUploadService _fileUploadService = new FileUploadService();
+      
       [Route("api/UploadImage")]
       public async Task<IHttpActionResult> UploadImages()
       {
         string fileUrls = "";
         var context = HttpContext.Current;
-        var root = context.Server.MapPath("~/App_Data");
+        var root = context.Server.MapPath("~/bin");
         var provider = new MultipartFormDataStreamProvider(root);
+
         try
         {
           await Request.Content.ReadAsMultipartAsync(provider);
+
           foreach (var file in provider.FileData)
           {
             var url = await _fileUploadService.FileUpload(file);
@@ -32,6 +35,7 @@ namespace T1809E.SEM3.P102_Team05.Controllers
             fileUrls += url;
             fileUrls += ";";
           }
+
           return Ok(fileUrls);
         }
         catch (Exception e)
