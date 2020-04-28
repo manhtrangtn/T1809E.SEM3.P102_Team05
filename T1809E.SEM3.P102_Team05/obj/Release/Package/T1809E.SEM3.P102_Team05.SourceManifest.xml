@@ -1,6 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<sitemanifest>
-  <IisApp path="C:\Users\TrangDM2\Documents\Visual Studio Projects\Project Sem 3\T1809E.SEM3.P102_Team05\T1809E.SEM3.P102_Team05\obj\Release\Package\PackageTmp" />
-  <setAcl path="C:\Users\TrangDM2\Documents\Visual Studio Projects\Project Sem 3\T1809E.SEM3.P102_Team05\T1809E.SEM3.P102_Team05\obj\Release\Package\PackageTmp" setAclResourceType="Directory" />
-  <setAcl path="C:\Users\TrangDM2\Documents\Visual Studio Projects\Project Sem 3\T1809E.SEM3.P102_Team05\T1809E.SEM3.P102_Team05\obj\Release\Package\PackageTmp" setAclUser="anonymousAuthenticationUser" setAclResourceType="Directory" />
-</sitemanifest>

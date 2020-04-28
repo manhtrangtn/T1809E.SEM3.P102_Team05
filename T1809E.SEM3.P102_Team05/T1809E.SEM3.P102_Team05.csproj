@@ -145,17 +145,27 @@
     <Compile Include="Migrations\202004251001318_InitiationDb.Designer.cs">
       <DependentUpon>202004251001318_InitiationDb.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202004271524463_newMigration.cs" />
+    <Compile Include="Migrations\202004271524463_newMigration.Designer.cs">
+      <DependentUpon>202004271524463_newMigration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Account.cs" />
+    <Compile Include="Models\ModelRequires\requireModelGetAll.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\Role.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\IRepository.cs" />
     <Compile Include="Repositories\ProductRepository.cs" />
+    <Compile Include="Repositories\RepositoryBase.cs" />
     <Compile Include="Services\IAccountService.cs" />
     <Compile Include="Services\Implements\AccountService.cs" />
     <Compile Include="Services\Implements\FileUploadService.cs" />
+    <Compile Include="Services\Implements\ProductService.cs" />
     <Compile Include="Services\Implements\RoleService.cs" />
+    <Compile Include="Services\IProductService.cs" />
     <Compile Include="Services\IRoleService.cs" />
+    <Compile Include="Services\IService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -173,6 +183,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202004251001318_InitiationDb.resx">
       <DependentUpon>202004251001318_InitiationDb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004271524463_newMigration.resx">
+      <DependentUpon>202004271524463_newMigration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
